@@ -1,0 +1,41 @@
+.nav-user {
+	background-color: #006432;
+	width: 100%;
+	top: 0px;
+	z-index: 100;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+}
+.nav-user img {
+	padding: 0.5em;
+	height: 1.5em;
+}
+.nav-user .userButtons {
+	margin-right: 1em;
+}
+.nav-user .userButtons button {
+	color: rgb(255, 255, 255);
+	padding: 0.5em;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+}
+.nav-page {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+li {
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	padding: 0.5em;
+	color: white;
+}
+li a {
+	display: block;
+	text-decoration: none;
+	padding: 0.5em;
+	color: #006432;
+}

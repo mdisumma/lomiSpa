@@ -3,6 +3,23 @@ body {
 	min-width: 360px;
 	margin: 0;
 }
+
+h1 {
+	margin: 0;
+	text-transform: uppercase;
+	color: #006432;
+	font-size: 36px;
+	font-weight: 100;
+	text-align: center;
+}
+h2 {
+	margin: 0;
+	text-transform: uppercase;
+	color: #006432;
+	font-size: 28px;
+	font-weight: 100;
+	text-align: center;
+}
 p {
 	margin: 1em;
 	max-width: 600px;

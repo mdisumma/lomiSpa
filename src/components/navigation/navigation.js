@@ -3,13 +3,17 @@ import "./navigation.css";
 function Navigation() {
 	return (
 		<nav>
-			<a href="#top">
-				<img src="/lomi-spa-mono.svg" alt="" loading="lazy"></img>
-			</a>
-			<button className="buttonToggle">
-				<i className="fas fa-bars"></i>
-			</button>
-			<ul className="toggle">
+			<div className="nav-user">
+				<a href="#top">
+					<img src="/lomi-spa-mono.svg" alt="" loading="lazy"></img>
+				</a>
+				<div className="userButtons">
+					<button>booking</button>
+					<button>login</button>
+				</div>
+			</div>
+
+			<ul className="nav-page">
 				<li className="link">
 					<a href="#gallery">Gallery</a>
 				</li>

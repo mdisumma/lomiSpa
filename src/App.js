@@ -1,11 +1,11 @@
 import "./App.css";
-import Header from "./components/header";
+import Navigation from "./components/navigation";
 import About from "./components/about";
 
 function App() {
 	return (
 		<>
-			<Header />
+			<Navigation />
 			<About />
 		</>
 	);

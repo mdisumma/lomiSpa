@@ -1,9 +1,14 @@
 import "./services.css";
 
-function Services() {
+function Services(props) {
 	return (
-		<div id="services">
-			<h2>Services</h2>
+		<div>
+			{/* {props.items.map((service) => {
+				<div key={service._id}>
+					<h2>{service.name}</h2>
+					<p>{service.description}</p>
+				</div>;
+			})} */}
 		</div>
 	);
 }

@@ -8,8 +8,8 @@
 	justify-content: space-between;
 }
 .nav-user img {
-	padding: 0.5em;
-	height: 1.5em;
+	padding: 1vh;
+	height: 3vh;
 }
 .nav-user .userButtons {
 	margin-right: 1em;
@@ -22,9 +22,11 @@
 	background-color: transparent;
 }
 .nav-page {
+	height: 5vh;
 	margin-top: 50px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 .nav-page li a {
 	display: block;

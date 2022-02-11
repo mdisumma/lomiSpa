@@ -5,18 +5,26 @@
 	align-items: center;
 }
 .lomiLogo {
-	padding: 10vh;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 #about img {
 	height: 30vh;
-}
-
-#about p {
-	margin: 10vh;
-	font-size: 2vh;
-	line-height: 3vh;
-	text-align: center;
+	margin: 0 auto;
 }
 .lomiMessage {
+	height: 40vh;
+	width: 100%;
 	background-color: rgba(0, 100, 50, 0.2);
+	display: flex;
+	align-items: center;
+}
+#about p {
+	color: rgb(0, 100, 50);
+	font-size: 1em;
+	line-height: 1.6em;
+	text-align: center;
+	margin: 0 1em;
 }

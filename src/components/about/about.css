@@ -6,14 +6,13 @@
 }
 
 #about img {
-	padding: 2em;
-	width: 140px;
+	padding: 10vh;
+	height: 30vh;
 }
 
 #about p {
-	margin: 1em;
-	max-width: 600px;
-	font-size: 1.2em;
-	line-height: 2em;
+	margin: 10vh;
+	font-size: 2vh;
+	line-height: 3vh;
 	text-align: center;
 }

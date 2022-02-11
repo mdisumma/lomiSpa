@@ -4,9 +4,10 @@
 	flex-direction: column;
 	align-items: center;
 }
-
-#about img {
+.lomiLogo {
 	padding: 10vh;
+}
+#about img {
 	height: 30vh;
 }
 
@@ -15,4 +16,7 @@
 	font-size: 2vh;
 	line-height: 3vh;
 	text-align: center;
+}
+.lomiMessage {
+	background-color: rgba(0, 100, 50, 0.2);
 }

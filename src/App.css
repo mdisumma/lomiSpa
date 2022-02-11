@@ -43,7 +43,3 @@ ul {
 	padding: 0;
 	list-style: none;
 }
-section {
-	margin: 0 1em;
-	min-height: calc(100vh - 2em);
-}

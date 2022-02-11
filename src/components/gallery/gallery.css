@@ -17,11 +17,11 @@
 }
 #buttonLeft {
 	top: 50%;
-	left: -1.5em;
+	left: 0;
 }
 #buttonRight {
 	top: 50%;
-	right: -1.5em;
+	right: 0px;
 }
 
 #slide {

@@ -6,11 +6,11 @@ import Services from "./components/services/services";
 import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
 
-fetch("http://localhost:4000/services")
-	.then((response) => response.json())
-	.then((data) => {
-		console.log(data);
-	});
+// fetch("http://localhost:4000/services")
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		console.log(data);
+// 	});
 
 function App() {
 	return (

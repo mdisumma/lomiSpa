@@ -28,15 +28,11 @@ function Gallery() {
 							loading="lazy"
 						/>
 					))}
-					{/* {
-						(document.getElementById("slide").firstElementChild.className =
-							"active")
-					} */}
 				</div>
 				<button
 					onClick={() => {
 						const selected = document.querySelector(".active");
-						console.log(selected);
+						// console.log(selected);
 						if (selected.nextElementSibling) {
 							selected.nextElementSibling.className = "active";
 							selected.className = "";
@@ -49,7 +45,7 @@ function Gallery() {
 				<button
 					onClick={() => {
 						const selected = document.querySelector(".active");
-						console.log(selected);
+						// console.log(selected);
 						if (selected.previousElementSibling) {
 							selected.previousElementSibling.className = "active";
 							selected.className = "";
@@ -63,5 +59,7 @@ function Gallery() {
 		</div>
 	);
 }
+const slide = document.getElementById("slide");
+slide.firstElementChild.className = "active";
 
 export default Gallery;

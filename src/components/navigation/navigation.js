@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Auth from "../auth/auth";
+import Auth from "./auth/auth";
 import "./navigation.css";
 
 function Navigation() {

@@ -18,12 +18,6 @@ function Gallery() {
 		<div id="gallery">
 			<h2>Gallery</h2>
 			<div id="container">
-				<button id="buttonRight">
-					<i className="fas fa-arrow-alt-circle-right"></i>
-				</button>
-				<button id="buttonLeft">
-					<i className="fas fa-arrow-alt-circle-left"></i>
-				</button>
 				<div id="slide">
 					{imgList.map((link) => (
 						<img
@@ -34,7 +28,37 @@ function Gallery() {
 							loading="lazy"
 						/>
 					))}
+					{
+						(document.getElementById("slide").firstElementChild.className =
+							"active")
+					}
 				</div>
+				<button
+					onClick={() => {
+						const selected = document.querySelector(".active");
+						console.log(selected);
+						if (selected.nextElementSibling) {
+							selected.nextElementSibling.className = "active";
+							selected.className = "";
+						}
+					}}
+					id="buttonRight"
+				>
+					<i className="fas fa-arrow-alt-circle-right"></i>
+				</button>
+				<button
+					onClick={() => {
+						const selected = document.querySelector(".active");
+						console.log(selected);
+						if (selected.previousElementSibling) {
+							selected.previousElementSibling.className = "active";
+							selected.className = "";
+						}
+					}}
+					id="buttonLeft"
+				>
+					<i className="fas fa-arrow-alt-circle-left"></i>
+				</button>
 			</div>
 		</div>
 	);

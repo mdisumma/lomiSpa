@@ -6,7 +6,11 @@ function Contacts() {
 			<h2>Contacts</h2>
 			<ul id="social">
 				<li>
-					<a href="https://www.facebook.com/LomiSpaCebu" target="blank">
+					<a
+						href="https://www.facebook.com/LomiSpaCebu"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<i className="fab fa-facebook"></i>
 					</a>
 				</li>

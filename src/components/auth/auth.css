@@ -1,0 +1,27 @@
+#logIn {
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	top: 5vh;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+	margin: 5px;
+	padding: 1em;
+	border: 1px solid #006432;
+}
+#logIn input {
+	border: 1px solid #006432;
+	margin: 2.5%;
+	padding: 1em;
+}
+.inputs {
+	margin: 1em 0;
+}
+#logIn button {
+	color: rgb(255, 255, 255);
+	background-color: #006432;
+	margin: 2.5%;
+	padding: 1em;
+	width: 45%;
+}

@@ -16,9 +16,25 @@ function Services() {
 			<section id="services">
 				<h2>Services</h2>
 				{data.map((service) => (
-					<div key={service._id}>
+					<div className="services" key={service._id}>
 						<h3>{service.name}</h3>
-						<p>{service.description}</p>
+						<p className="description">{service.description}</p>
+						<div className="prices">
+							<p>Prices:</p>
+							<p>
+								60 min <img src="images/peso.svg" width="16px" />
+								{service.price[0]}
+							</p>
+							<p>
+								90 min <img src="images/peso.svg" width="16px" />
+								{service.price[1]}
+							</p>
+							<p>
+								120 min <img src="images/peso.svg" width="16px" />
+								{service.price[2]}
+							</p>
+							<button>book online</button>
+						</div>
 					</div>
 				))}
 			</section>

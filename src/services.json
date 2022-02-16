@@ -3,100 +3,65 @@
 {
    "name": "Lomi treatments",
    "description":	"Indulge in this soothing, rejuvenating glow massage that connects your mind and body, with the nurturing touch from the two therapists combining banana leaves, hot stone, shell, shiatsu, and a Hawaiian technique plus an organic facial, to achieve a deep sense of relaxation and rejuvenation.",
-   "price": {
-      "60min": "",
-      "90min": "",
-      "240min": 3000
-   }
+   "price": [ "","", 3000]
+  
 },
 {
    "name": "Lomi-Lomi Massage",
    "description":	"Experience a fusion of Hawaiian and Filipino technique massage that takes you to a state of relaxation and stillness while improving blood circulation and boosting the immune system.",
-   "price": {
-      "60min": 1500,
-      "90min": 2000,
-      "120min": 2500
-   }
+   "price": [1500,2000,2500]
+ 
 },
 {
    "name": "Traditional Filipino Hilot",
    "description":	"This relaxing yet rejuvenating therapy that uses banana leaves and hot stone helps remove toxins and cleanses the body.",
-   "price": {
-      "60min": 1200,
-      "90min": 1800,
-      "120min": 2400
-   }
+   "price": [1200,1800,2400]
 },
 {
    "name": "Stone Massage",
    "description":	"This therapy uses heated volcanic stone to ease muscle tension and pain, helps reduce muscle spasms, reduces stress and anxiety and promote better sleep quality.",
-   "price": {
-      "60min": 1000,
-      "90min": 1400,
-      "120min": 2000
-   }
+   "price": 
+      [1000,1400,2000]
 },
 {
    "name": "Herbal Massage",
    "description":	"This blend of herbal hot compress massage increases blood circulation and energy flow, reduces mental fatigue and stress and boosts positive energy. ",
-   "price": {
-      "60min": 1000,
-      "90min": 1400,
-      "120min": 2000
-   }
+   "price": [1000,1400,2000]
+  
 },
 {
    "name": "Aloevera Massage",
    "description":	"Moisturize and refresh your skin with this therapy for a glow. Ideal for sunburn and on summer days!",
-   "price": {
-      "60min": 900,
-      "90min": 1200,
-      "120min": 1800
-   }
+   "price": [900,1200,1800]
+  
 },
 {
    "name": "Coconut Massage",
    "description":	"This massage uses pure coconut oil, which is naturally anti-bacterial and anti-fungal, leaving your skin smooth and moisturize.",
-   "price": {
-      "60min": 900,
-      "90min": 1200,
-      "120min": 1800
-   }
+   "price": [900,1200,1800]
 },
 {
    "name": "Body Scrub Massage",
    "description":	"Exfoliate and hydrate your skin with this smooth and soft body scrub massage, promoting efficient circulation.",
-   "price": {
-      "60min": 800,
-      "90min": 1100,
-      "120min": 1600
-   }
+   "price": [800,1100,1600]
+ 
 },
 {
    "name": "Oil Massage",
    "description":	"Relax and pamper yourself with our Swedish techniques that decrease stress and increase relaxation.",
-   "price": {
-      "60min": 800,
-      "90min": 1100,
-      "120min": 1600 
-   }
+   "price":[800,1100,1600] 
+  
 },
 {
    "name": "Dry Massage",
    "description":	"This finger and palm pressure massage, which is mainly applying pressure to specific points on the body, stimulates energy flow.",
-   "price": {
-      "60min": 700,
-      "90min": 10000,
-      "120min": 1400
-   }
+   "price": [700,10000,1400]
+
 },
 {
    "name": "Foot Massage",
    "description":	"This foot massage is a perfect way to relax, particularly after a long day of standing and walking. It is a soothing finger point pressure kneading massage.",
-   "price": {
-      "60min": 600,
-      "90min": 900,
-      "120min": 1200 
-   }
+   "price":[600,900,1200 ]
+
 }
 ]

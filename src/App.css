@@ -24,7 +24,7 @@ h2 {
 }
 h3 {
 	margin: 0;
-	padding-top: 1em;
+	padding: 0.5em;
 	text-transform: uppercase;
 	color: rgb(0, 100, 50);
 	font-size: 1.2em;
@@ -43,6 +43,6 @@ ul {
 	padding: 0;
 	list-style: none;
 }
-section * {
+/* section * {
 	box-sizing: border-box;
-}
+} */

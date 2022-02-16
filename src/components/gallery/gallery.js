@@ -28,10 +28,10 @@ function Gallery() {
 							loading="lazy"
 						/>
 					))}
-					{
+					{/* {
 						(document.getElementById("slide").firstElementChild.className =
 							"active")
-					}
+					} */}
 				</div>
 				<button
 					onClick={() => {

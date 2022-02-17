@@ -22,15 +22,18 @@ function Services() {
 						<div className="prices">
 							<p>Prices:</p>
 							<p>
-								60 min <img src="images/peso.svg" width="16px" />
+								60 min{" "}
+								<img src="images/peso.svg" alt="philippine peso" width="16px" />
 								{service.price[0]}
 							</p>
 							<p>
-								90 min <img src="images/peso.svg" width="16px" />
+								90 min{" "}
+								<img src="images/peso.svg" alt="philippine peso" width="16px" />
 								{service.price[1]}
 							</p>
 							<p>
-								120 min <img src="images/peso.svg" width="16px" />
+								120 min{" "}
+								<img src="images/peso.svg" alt="philippine peso" width="16px" />
 								{service.price[2]}
 							</p>
 							<button>book online</button>

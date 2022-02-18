@@ -25,15 +25,60 @@ function Auth() {
 			<div className="authInputs">
 				<button
 					onClick={(e) => {
-						console.log(emailValue, passwordValue);
+						if (emailValue && passwordValue) {
+							// console.log(emailValue, passwordValue);
+							const post = {
+								method: "POST",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify({
+									email: emailValue,
+									password: passwordValue,
+								}),
+							};
+							fetch("http://localhost:4000/findUser/", post)
+								.then((response) => response.json())
+								.then((result) => {
+									console.log(result);
+									if (result === null) {
+										fetch("http://localhost:4000/user/", post)
+											.then((response) => response.json())
+											.then((result) => console.log(result));
+									} else {
+										alert("these email and password already exist");
+									}
+								});
+						} else {
+							alert("please provide email and password");
+						}
 					}}
 				>
 					Sign up
 				</button>
 				<button
 					onClick={(e) => {
-						console.log(emailValue, passwordValue);
-						window.location.href = `/user`;
+						if (emailValue && passwordValue) {
+							// console.log(emailValue, passwordValue);
+							const post = {
+								method: "POST",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify({
+									email: emailValue,
+									password: passwordValue,
+								}),
+							};
+							fetch("http://localhost:4000/findUser/", post)
+								.then((response) => response.json())
+								.then((result) => {
+									console.log(result);
+									if (result !== null) {
+										window.location.href = `/user`;
+									} else {
+										alert("Please sing up before log in");
+									}
+								});
+						} else {
+							alert("please provide email and password");
+						}
 					}}
 				>
 					Log in

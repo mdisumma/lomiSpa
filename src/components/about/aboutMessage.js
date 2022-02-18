@@ -1,3 +1,4 @@
+import "./aboutMessage.css";
 function AboutMessage() {
 	return (
 		<div className="lomiMessage">

@@ -1,0 +1,13 @@
+.lomiMessage {
+	height: 40vh;
+	width: 100%;
+	background-color: rgba(0, 100, 50, 0.2);
+	display: flex;
+	align-items: center;
+}
+.lomiMessage p {
+	color: rgb(0, 100, 50);
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 1em;
+}

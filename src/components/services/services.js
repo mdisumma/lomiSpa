@@ -1,7 +1,7 @@
 import "./services.css";
 import React, { useState, useEffect } from "react";
 
-function Services() {
+function Services(props) {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
@@ -36,7 +36,7 @@ function Services() {
 								<img src="images/peso.svg" alt="philippine peso" width="16px" />
 								{service.price[2]}
 							</p>
-							<button>book online</button>
+							{props.bookOnline}
 						</div>
 					</div>
 				))}

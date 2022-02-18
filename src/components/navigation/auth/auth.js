@@ -7,7 +7,7 @@ function Auth() {
 	return (
 		<div id="logIn">
 			<input
-				className="inputs"
+				className="authInputs"
 				id="userEmail"
 				type="email"
 				value={emailValue}
@@ -15,27 +15,28 @@ function Auth() {
 				placeholder="email"
 			/>
 			<input
-				className="inputs"
+				className="authInputs"
 				id="userPassword"
 				type="password"
 				value={passwordValue}
 				onChange={(e) => setPasswordValue(e.target.value)}
 				placeholder="password"
 			/>
-			<div className="inputs">
+			<div className="authInputs">
 				<button
 					onClick={(e) => {
 						console.log(emailValue, passwordValue);
 					}}
 				>
-					sign in
+					Sign up
 				</button>
 				<button
 					onClick={(e) => {
 						console.log(emailValue, passwordValue);
+						window.location.href = `/user`;
 					}}
 				>
-					sign up
+					Log in
 				</button>
 			</div>
 		</div>

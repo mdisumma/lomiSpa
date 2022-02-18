@@ -1,3 +1,4 @@
+import "./aboutLogo.css";
 function AboutLogo() {
 	return (
 		<div className="lomiLogo">

@@ -1,8 +1,15 @@
+import Navigation from "../components/navigation/navigation";
+import LogOut from "../components/navigation/logOut";
+import AboutLogo from "../components/about/aboutLogo";
+import Footer from "../components/footer/footer";
+
 function AdminPage() {
 	return (
-		<div>
-			<h1>Admin page</h1>
-		</div>
+		<>
+			<Navigation log={<LogOut />} />
+			<AboutLogo />
+			<Footer />
+		</>
 	);
 }
 

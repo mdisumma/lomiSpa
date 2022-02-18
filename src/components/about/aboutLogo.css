@@ -1,0 +1,10 @@
+.lomiLogo {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.lomiLogo img {
+	height: 30vh;
+	margin: 0 auto;
+}

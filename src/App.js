@@ -1,21 +1,19 @@
 import "./App.css";
-import Navigation from "./components/navigation/navigation";
-import About from "./components/about/about";
-import Gallery from "./components/gallery/gallery";
-import Services from "./components/services/services";
-import Contacts from "./components/contacts/contacts";
-import Footer from "./components/footer/footer";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homePage";
+import AdminPage from "./pages/adminPage";
+import UserPage from "./pages/userPage";
 
 function App() {
 	return (
-		<>
-			<Navigation />
-			<About />
-			<Gallery />
-			<Services />
-			<Contacts />
-			<Footer />
-		</>
+		<div>
+			<Routes>
+				<Route path="/" element={<HomePage />} exact />
+				<Route path="/admin" element={<AdminPage />} />
+				<Route path="/user" element={<UserPage />} />
+			</Routes>
+		</div>
 	);
 }
 

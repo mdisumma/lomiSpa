@@ -1,17 +1,19 @@
-.bookingContainer {
-	background-color: rgba(0, 100, 50, 0.2);
-}
 #booking h3 {
 	font-size: 1.5em;
 	margin: 0;
 }
+.bookingContainer {
+	background-color: rgba(0, 100, 50, 0.2);
+}
+
 #booking .bookingForm {
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 2em;
 	max-width: 533px;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	align-items: center;
 }
 
 #booking .bookingInputs {
@@ -22,6 +24,7 @@
 	margin: 0 1em;
 }
 #booking button {
+	grid-column: 2/3;
 	font-size: 1em;
 	padding: 1em;
 	margin: 1em;

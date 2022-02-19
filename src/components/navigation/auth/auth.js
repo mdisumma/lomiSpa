@@ -24,15 +24,16 @@ function Auth() {
 			/>
 			<div className="authInputs">
 				<button
-					onClick={(e) => {
+					type="button"
+					onClick={() => {
 						if (emailValue && passwordValue) {
-							// console.log(emailValue, passwordValue);
 							const post = {
 								method: "POST",
 								headers: { "Content-Type": "application/json" },
 								body: JSON.stringify({
 									email: emailValue,
 									password: passwordValue,
+									auth: "user",
 								}),
 							};
 							fetch("http://localhost:4000/findUser/", post)
@@ -55,7 +56,8 @@ function Auth() {
 					Sign up
 				</button>
 				<button
-					onClick={(e) => {
+					type="button"
+					onClick={() => {
 						if (emailValue && passwordValue) {
 							// console.log(emailValue, passwordValue);
 							const post = {
@@ -64,6 +66,7 @@ function Auth() {
 								body: JSON.stringify({
 									email: emailValue,
 									password: passwordValue,
+									auth: "user",
 								}),
 							};
 							fetch("http://localhost:4000/findUser/", post)

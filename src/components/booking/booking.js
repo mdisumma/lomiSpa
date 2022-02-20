@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./booking.css";
+import { BiCaretDown } from "react-icons/bi";
 
 function BookingForm() {
+	useEffect(() => {
+		fetch("http://localhost:4000/services")
+			.then((response) => response.json())
+			.then(setData);
+	}, []);
+
+	const [data, setData] = useState([]);
 	const [nameValue, setNameValue] = useState("");
 	const [emailValue, setEmailValue] = useState("");
 	const [dateValue, setDateValue] = useState("");
-	const [serviceValue, setServiceValue] = useState("");
+	const [serviceName, setServiceName] = useState("");
 	const [timeValue, setTimeValue] = useState("");
 	const [durationValue, setDurationValue] = useState("");
 	const [notesValue, setNotesValue] = useState("");
@@ -49,18 +57,41 @@ function BookingForm() {
 						value={dateValue}
 						onChange={(e) => setDateValue(e.target.value)}
 					/>
-					<label className="bookingLabels" htmlFor="bookingService">
+					<label className="bookingLabels" htmlFor="query">
 						Service name
 					</label>
-					<input
-						className="bookingInputs"
-						id="bookingService"
-						name="bookingService"
-						type="text"
-						value={serviceValue}
-						onChange={(e) => setServiceValue(e.target.value)}
-						placeholder="service name"
-					/>
+					<div id="nameDropDown">
+						<input
+							className="bookingInputs"
+							type="text"
+							name="query"
+							id="query"
+							value={serviceName}
+							readOnly
+						/>
+						<button
+							onClick={() => {
+								document.querySelector(".dropDown").style.display = "block";
+							}}
+						>
+							<BiCaretDown />{" "}
+						</button>
+						<ul className="dropDown">
+							{data.map((service) => (
+								<li
+									onClick={(e) => {
+										const serviceNameValue = e.target.innerText;
+										console.log(serviceNameValue);
+										setServiceName(serviceNameValue);
+										document.querySelector(".dropDown").style.display = "none";
+									}}
+									key={service._id}
+								>
+									{service.name}
+								</li>
+							))}
+						</ul>
+					</div>
 					<label className="bookingLabels" htmlFor="bookingTime">
 						Service <i>9am to 6pm</i>
 					</label>
@@ -110,7 +141,7 @@ function BookingForm() {
 								nameValue &&
 								emailValue &&
 								dateValue &&
-								serviceValue &&
+								serviceName &&
 								timeValue &&
 								durationValue
 							) {
@@ -118,16 +149,16 @@ function BookingForm() {
 									name: nameValue,
 									email: emailValue,
 									date: dateValue,
-									service: serviceValue,
+									service: serviceName,
 									time: timeValue,
 									duration: durationValue,
-									notes:notesValue,
+									notes: notesValue,
 								};
 								console.log(submitbooking);
 								setNameValue("");
 								setEmailValue("");
 								setDateValue("");
-								setServiceValue("");
+								setServiceName("");
 								setTimeValue("");
 								setDurationValue("");
 								setNotesValue("");

@@ -6,7 +6,7 @@
 	background-color: rgba(0, 100, 50, 0.2);
 }
 
-#booking .bookingForm {
+.bookingForm {
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 2em;
@@ -31,4 +31,33 @@
 	background-color: rgb(0, 100, 50);
 	color: rgb(255, 255, 255);
 	border: none;
+}
+
+#nameDropDown {
+	margin: 1em;
+	display: flex;
+	position: relative;
+}
+#nameDropDown #query {
+	margin: 0;
+	width: 70%;
+}
+
+#nameDropDown button {
+	width: 20%;
+	margin: 0;
+	padding: 0;
+}
+.dropDown {
+	position: absolute;
+	display: none;
+	top: 3em;
+	right: 0;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid black;
+	border-bottom: none;
+}
+.dropDown li {
+	padding: 0.5em;
+	border-bottom: 1px solid black;
 }

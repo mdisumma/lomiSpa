@@ -59,28 +59,31 @@ function Auth() {
 					type="button"
 					onClick={() => {
 						if (emailValue && passwordValue) {
-							// console.log(emailValue, passwordValue);
-							const post = {
+							fetch("http://localhost:4000/findUser/", {
 								method: "POST",
 								headers: { "Content-Type": "application/json" },
 								body: JSON.stringify({
 									email: emailValue,
 									password: passwordValue,
-									auth: "user",
 								}),
-							};
-							fetch("http://localhost:4000/findUser/", post)
+							})
 								.then((response) => response.json())
 								.then((result) => {
-									console.log(result);
 									if (result !== null) {
-										window.location.href = `/user`;
+										console.log(result);
+										if (result.auth === "admin") {
+											console.log("admin");
+											window.location.href = `/admin`;
+										} else if (result.auth === "user") {
+											console.log("user");
+											window.location.href = `/user`;
+										} else {
+											alert("Please sing up before log in");
+										}
 									} else {
 										alert("Please sing up before log in");
 									}
 								});
-						} else {
-							alert("please provide email and password");
 						}
 					}}
 				>

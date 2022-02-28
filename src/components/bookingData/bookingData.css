@@ -1,0 +1,14 @@
+.bookingData {
+    border:1px solid  rgb(0, 100, 50);
+    max-width: 500px;
+    margin: 1em auto;
+}
+
+
+.bookingData li {
+    padding: 0.5em;
+}
+
+.bookingData li:nth-child(odd) {
+    background-color: rgba(0, 100, 50, 0.2);
+}

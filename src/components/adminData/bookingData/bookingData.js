@@ -10,7 +10,7 @@ function BookingData() {
 			.then(setData);
 	}, []);
 
-	console.log(data);
+	// console.log(data)
 	if (dateValue !== "") {
 		return <div>{dateValue}</div>;
 	} else {

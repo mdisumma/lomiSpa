@@ -18,7 +18,7 @@ function BookingData() {
 			<div>
 				<h2>Booking List</h2>
 				<label className="bookingLabels" htmlFor="dateValue">
-					select date
+					date
 				</label>
 				<input
 					className="bookingInputs"
@@ -28,6 +28,7 @@ function BookingData() {
 					value={dateValue}
 					onChange={(e) => setDateValue(e.target.value)}
 				/>
+				<button>seletc</button>
 				{data.map((booking) => (
 					<ul key={booking._id} className="bookingData">
 						<li>

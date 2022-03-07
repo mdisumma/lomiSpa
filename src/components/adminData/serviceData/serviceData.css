@@ -1,0 +1,55 @@
+.serviceForm {
+	box-sizing: border-box;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 100, 50, 0.2);
+	border: 1px solid rgb(0, 100, 50);
+}
+
+.serviceForm label,
+.serviceForm input {
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+.adminSevices button {
+	font-size: 1em;
+	padding: 0.5em;
+	margin: 1em 0;
+	background-color: rgb(0, 100, 50);
+	color: white;
+}
+.servicePricesValue {
+	display: flex;
+	justify-content: space-between;
+}
+.servicePrices {
+	width: 25%;
+}
+
+.servicesData {
+	border: 1px solid rgb(0, 100, 50);
+	max-width: 500px;
+	margin: 1em auto;
+}
+.servicesData li {
+	padding: 0.5em;
+}
+
+.servicesData li:nth-child(odd) {
+	background-color: rgba(0, 100, 50, 0.2);
+}
+.servicesData .prices li {
+	background-color: transparent;
+}
+.servicesData button {
+	width: 100%;
+	margin: 0;
+	border: none;
+}
+.prices {
+	display: flex;
+}

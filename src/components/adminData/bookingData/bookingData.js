@@ -17,18 +17,21 @@ function BookingData() {
 		return (
 			<div>
 				<h2>Booking List</h2>
-				<label className="bookingLabels" htmlFor="dateValue">
-					date
-				</label>
-				<input
-					className="bookingInputs"
-					id="dateValue"
-					name="dateValue"
-					type="date"
-					value={dateValue}
-					onChange={(e) => setDateValue(e.target.value)}
-				/>
-				<button>seletc</button>
+				<div className="bookingFilter">
+					<label className="bookingLabels" htmlFor="dateValue">
+						date
+					</label>
+					<input
+						className="bookingInputs"
+						id="dateValue"
+						name="dateValue"
+						type="date"
+						value={dateValue}
+						onChange={(e) => setDateValue(e.target.value)}
+					/>
+					<button>seletc</button>
+				</div>
+
 				{data.map((booking) => (
 					<ul key={booking._id} className="bookingData">
 						<li>

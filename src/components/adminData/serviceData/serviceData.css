@@ -52,4 +52,5 @@
 }
 .prices {
 	display: flex;
+	margin: 0;
 }

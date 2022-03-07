@@ -43,7 +43,10 @@ function Auth() {
 									if (result === null) {
 										fetch("http://localhost:4000/user/", post)
 											.then((response) => response.json())
-											.then((result) => console.log(result));
+											.then((result) => {
+												console.log(result);
+												alert("thank you for sign up");
+											});
 									} else {
 										alert("these email and password already exist");
 									}

@@ -10,7 +10,7 @@ function ServiceData() {
 	const [thirtPriceValue, setThirtPriceValue] = useState("");
 
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/services")
+		fetch("http://localhost:4000/services")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);
@@ -98,10 +98,7 @@ function ServiceData() {
 								headers: { "Content-Type": "application/json" },
 								body: JSON.stringify(newService),
 							};
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/services",
-								post
-							)
+							fetch("http://localhost:4000/services", post)
 								.then((response) => response.json())
 								.then((result) => {
 									console.log(result);
@@ -141,14 +138,11 @@ function ServiceData() {
 										.childNodes[3].innerText,
 								],
 							};
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/services",
-								{
-									method: "DELETE",
-									headers: { "Content-Type": "application/json" },
-									body: JSON.stringify(findServiceData),
-								}
-							)
+							fetch("http://localhost:4000/services", {
+								method: "DELETE",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify(findServiceData),
+							})
 								.then((response) => response.json())
 								.then((result) => {
 									console.log(result);

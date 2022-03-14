@@ -4,7 +4,7 @@ import { BiCaretDown } from "react-icons/bi";
 
 function BookingForm() {
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/services")
+		fetch("http://localhost:4000/services")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);
@@ -167,10 +167,7 @@ function BookingForm() {
 									headers: { "Content-Type": "application/json" },
 									body: JSON.stringify(submitbooking),
 								};
-								fetch(
-									"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/booking",
-									post
-								)
+								fetch("http://localhost:4000/booking", post)
 									.then((response) => response.json())
 									.then((result) => {
 										console.log(result);

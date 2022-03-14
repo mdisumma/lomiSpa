@@ -7,7 +7,7 @@ function UserData() {
 	const [userPasswordValue, setUserPasswordValue] = useState("");
 
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/users")
+		fetch("http://localhost:4000/users")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);
@@ -56,10 +56,7 @@ function UserData() {
 								headers: { "Content-Type": "application/json" },
 								body: JSON.stringify(submitUserData),
 							};
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user",
-								post
-							)
+							fetch("http://localhost:4000/user", post)
 								.then((response) => response.json())
 								.then((result) => {
 									console.log(result);
@@ -88,14 +85,11 @@ function UserData() {
 								password: e.target.parentElement.childNodes[1].innerText,
 							};
 							console.log(findUserData);
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user",
-								{
-									method: "DELETE",
-									headers: { "Content-Type": "application/json" },
-									body: JSON.stringify(findUserData),
-								}
-							)
+							fetch("http://localhost:4000/user", {
+								method: "DELETE",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify(findUserData),
+							})
 								.then((response) => response.json())
 								.then((result) => {
 									console.log(result);

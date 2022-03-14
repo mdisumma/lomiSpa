@@ -6,7 +6,7 @@ function BookingData() {
 	const [dateValue, setDateValue] = useState("");
 
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/booking")
+		fetch("http://localhost:4000/booking")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);

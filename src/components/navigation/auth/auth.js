@@ -36,18 +36,12 @@ function Auth() {
 									auth: "user",
 								}),
 							};
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/findUser/",
-								post
-							)
+							fetch("http://localhost:4000/findUser/", post)
 								.then((response) => response.json())
 								.then((result) => {
 									console.log(result);
 									if (result === null) {
-										fetch(
-											"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user/",
-											post
-										)
+										fetch("http://localhost:4000/user/", post)
 											.then((response) => response.json())
 											.then((result) => {
 												console.log(result);
@@ -68,17 +62,14 @@ function Auth() {
 					type="button"
 					onClick={() => {
 						if (emailValue && passwordValue) {
-							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/findUser/",
-								{
-									method: "POST",
-									headers: { "Content-Type": "application/json" },
-									body: JSON.stringify({
-										email: emailValue,
-										password: passwordValue,
-									}),
-								}
-							)
+							fetch("http://localhost:4000/findUser/", {
+								method: "POST",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify({
+									email: emailValue,
+									password: passwordValue,
+								}),
+							})
 								.then((response) => response.json())
 								.then((result) => {
 									if (result !== null) {

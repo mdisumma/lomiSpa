@@ -11,7 +11,16 @@ const stripeTestPromise = loadStripe(PUBLIC_KEY);
 export default function StripeContainer(props) {
 	return (
 		<Elements stripe={stripeTestPromise}>
-			<PaymentForm price={props.price} />
+			<PaymentForm
+				price={props.price}
+				nameValue={props.nameValue}
+				emailValue={props.emailValue}
+				dateValue={props.dateValue}
+				serviceName={props.serviceName}
+				timeValue={props.timeValue}
+				durationValue={props.durationValue}
+				notesValue={props.notesValue}
+			/>
 		</Elements>
 	);
 }

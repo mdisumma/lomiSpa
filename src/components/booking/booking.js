@@ -161,56 +161,16 @@ function BookingForm() {
 						<img src="images/peso.svg" alt="philippine peso" width="16px" />
 						{price}
 					</div>
-					<button
-						type="button"
-						onClick={(e) => {
-							if (
-								nameValue &&
-								emailValue &&
-								dateValue &&
-								serviceName &&
-								timeValue &&
-								durationValue
-							) {
-								const submitbooking = {
-									name: nameValue,
-									email: emailValue,
-									date: dateValue,
-									service: serviceName,
-									time: timeValue,
-									duration: durationValue,
-									notes: notesValue,
-								};
-								console.log(submitbooking);
-								setNameValue("");
-								setEmailValue("");
-								setDateValue("");
-								setServiceName("");
-								setTimeValue("");
-								setDurationValue("");
-								setNotesValue("");
-								const post = {
-									method: "POST",
-									headers: { "Content-Type": "application/json" },
-									body: JSON.stringify(submitbooking),
-								};
-								fetch(
-									"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/booking",
-									post
-								)
-									.then((response) => response.json())
-									.then((result) => {
-										console.log(result);
-										alert("thank you for booking online");
-									});
-							} else {
-								alert("please complete the booking form");
-							}
-						}}
-					>
-						Submit
-					</button>
-					<CheckOutForm price={price} />
+					<CheckOutForm
+						price={price}
+						nameValue={nameValue}
+						emailValue={emailValue}
+						dateValue={dateValue}
+						serviceName={serviceName}
+						timeValue={timeValue}
+						durationValue={durationValue}
+						notesValue={notesValue}
+					/>
 				</div>
 			</div>
 		</div>

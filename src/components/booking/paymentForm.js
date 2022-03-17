@@ -17,10 +17,13 @@ function PaymentForm(props) {
 		if (!error) {
 			try {
 				const { id } = paymentMethod;
-				const response = await axios.post("http://localhost:4000/payment", {
-					amount: props.price * 100,
-					id,
-				});
+				const response = await axios.post(
+					"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/payment",
+					{
+						amount: props.price * 100,
+						id,
+					}
+				);
 
 				if (response.data.success) {
 					console.log("successful payment");

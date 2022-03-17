@@ -13,6 +13,7 @@ function UserPage() {
 			<AboutLogo />
 			<BookingForm />
 			<Services />
+
 			<Contacts />
 			<Footer />
 		</>

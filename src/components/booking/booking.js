@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./booking.css";
 import { BiCaretDown } from "react-icons/bi";
+import CheckOutForm from "./checkOutForm";
 
 function BookingForm() {
 	useEffect(() => {
@@ -17,6 +18,8 @@ function BookingForm() {
 	const [timeValue, setTimeValue] = useState("");
 	const [durationValue, setDurationValue] = useState("");
 	const [notesValue, setNotesValue] = useState("");
+	const [getPrice, setGetPrice] = useState([]);
+	const [price, setPrice] = useState("");
 	return (
 		<div id="booking">
 			<h2>Book Online</h2>
@@ -84,6 +87,12 @@ function BookingForm() {
 										console.log(serviceNameValue);
 										setServiceName(serviceNameValue);
 										document.querySelector(".dropDown").style.display = "none";
+										const selectService = data.filter((item) => {
+											return item.name === serviceNameValue;
+										});
+										console.log(selectService[0].price);
+										setGetPrice(selectService[0].price);
+										console.log(getPrice);
 									}}
 									key={service._id}
 								>
@@ -116,7 +125,21 @@ function BookingForm() {
 						name="bookingDuration"
 						type="number"
 						value={durationValue}
-						onChange={(e) => setDurationValue(e.target.value)}
+						onChange={(e) => {
+							setDurationValue(e.target.value);
+						}}
+						onBlur={() => {
+							if (durationValue === "60") {
+								console.log(getPrice[0]);
+								setPrice(getPrice[0]);
+							} else if (durationValue === "90") {
+								console.log(getPrice[1]);
+								setPrice(getPrice[1]);
+							} else if (durationValue === "120") {
+								console.log(getPrice[2]);
+								setPrice(getPrice[2]);
+							} else alert("please provide a valid time");
+						}}
 						min="60"
 						max="120"
 						step="30"
@@ -133,7 +156,11 @@ function BookingForm() {
 						onChange={(e) => setNotesValue(e.target.value)}
 						rows="3"
 					/>
-
+					<div className="bookingLabels">
+						Price:
+						<img src="images/peso.svg" alt="philippine peso" width="16px" />
+						{price}
+					</div>
 					<button
 						type="button"
 						onClick={(e) => {
@@ -183,6 +210,7 @@ function BookingForm() {
 					>
 						Submit
 					</button>
+					<CheckOutForm price={price} />
 				</div>
 			</div>
 		</div>

@@ -9,8 +9,14 @@ function BookingForm() {
 			.then((response) => response.json())
 			.then(setData);
 	}, []);
+	useEffect(() => {
+		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/booking")
+			.then((response) => response.json())
+			.then(setBooking);
+	}, []);
 
 	const [data, setData] = useState([]);
+	const [booking, setBooking] = useState([]);
 	const [nameValue, setNameValue] = useState("");
 	const [emailValue, setEmailValue] = useState("");
 	const [dateValue, setDateValue] = useState("");
@@ -63,7 +69,7 @@ function BookingForm() {
 					<label className="bookingLabels" htmlFor="query">
 						Service name
 					</label>
-					<div id="nameDropDown">
+					<div className="dropDownContainer">
 						<input
 							className="bookingInputs"
 							type="text"
@@ -74,12 +80,12 @@ function BookingForm() {
 						/>
 						<button
 							onClick={() => {
-								document.querySelector(".dropDown").style.display = "block";
+								document.querySelector("#dropDownName").style.display = "block";
 							}}
 						>
 							<BiCaretDown />{" "}
 						</button>
-						<ul className="dropDown">
+						<ul className="dropDown" id="dropDownName">
 							{data.map((service) => (
 								<li
 									onClick={(e) => {
@@ -104,17 +110,56 @@ function BookingForm() {
 					<label className="bookingLabels" htmlFor="bookingTime">
 						Service <i>9am to 6pm</i>
 					</label>
-					<input
-						className="bookingInputs"
-						id="bookingTime"
-						name="bookingTime"
-						type="time"
-						value={timeValue}
-						onChange={(e) => setTimeValue(e.target.value)}
-						min="09:00"
-						max="18:00"
-						required
-					/>
+					<div className="dropDownContainer">
+						<input
+							className="bookingInputs"
+							id="bookingTime"
+							name="bookingTime"
+							type="text"
+							value={timeValue}
+							onChange={(e) => setTimeValue(e.target.value)}
+						/>
+						<button
+							onClick={() => {
+								document.querySelector("#dropDownTime").style.display = "block";
+							}}
+						>
+							<BiCaretDown />{" "}
+						</button>
+						<ul
+							className="dropDown"
+							id="dropDownTime"
+							onClick={(e) => {
+								const selectTime = e.target.innerText;
+								console.log(selectTime);
+								setTimeValue(selectTime);
+								document.querySelector("#dropDownTime").style.display = "none";
+
+								const selectDateCheck = booking.filter((item) => {
+									return item.date === dateValue;
+								});
+
+								const selectTimeCheck = selectDateCheck.filter((item) => {
+									return item.time === selectTime;
+								});
+								console.log(selectDateCheck);
+								console.log(selectTimeCheck);
+								if (selectTimeCheck.length > 0) {
+									alert("the time slot is already booked");
+								}
+							}}
+						>
+							<li>9.00</li>
+							<li>10.00</li>
+							<li>11.00</li>
+							<li>12.00</li>
+							<li>13.00</li>
+							<li>14.00</li>
+							<li>15.00</li>
+							<li>16.00</li>
+							<li>17.00</li>
+						</ul>
+					</div>
 
 					<label className="bookingLabels" htmlFor="bookingDuration">
 						Service duration

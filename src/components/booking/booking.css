@@ -33,17 +33,17 @@
 	border: none;
 }
 
-#nameDropDown {
-	margin: 1em;
+.dropDownContainer {
+	margin: 1em 0;
 	display: flex;
 	position: relative;
 }
-#nameDropDown #query {
+.dropDownContainer input {
 	margin: 0;
 	width: 70%;
 }
 
-#nameDropDown button {
+.dropDownContainer button {
 	width: 20%;
 	margin: 0;
 	padding: 0;
@@ -56,6 +56,7 @@
 	background-color: rgb(255, 255, 255);
 	border: 1px solid black;
 	border-bottom: none;
+	z-index: 10;
 }
 .dropDown li {
 	padding: 0.5em;

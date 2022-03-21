@@ -146,6 +146,7 @@ function BookingForm() {
 								console.log(selectTimeCheck);
 								if (selectTimeCheck.length > 0) {
 									alert("the time slot is already booked");
+									setTimeValue("");
 								}
 							}}
 						>

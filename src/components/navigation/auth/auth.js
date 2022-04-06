@@ -37,7 +37,7 @@ function Auth() {
 								}),
 							};
 							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/findUser/",
+								"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/findUser/",
 								post
 							)
 								.then((response) => response.json())
@@ -45,7 +45,7 @@ function Auth() {
 									console.log(result);
 									if (result === null) {
 										fetch(
-											"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user/",
+											"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/user/",
 											post
 										)
 											.then((response) => response.json())
@@ -69,7 +69,7 @@ function Auth() {
 					onClick={() => {
 						if (emailValue && passwordValue) {
 							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/findUser/",
+								"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/findUser/",
 								{
 									method: "POST",
 									headers: { "Content-Type": "application/json" },
@@ -85,10 +85,10 @@ function Auth() {
 										console.log(result);
 										if (result.auth === "admin") {
 											console.log("admin");
-											window.location.href = `http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/admin`;
+											window.location.href = `http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/admin`;
 										} else if (result.auth === "user") {
 											console.log("user");
-											window.location.href = `http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user`;
+											window.location.href = `http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/user`;
 										} else {
 											alert("Please sing up before log in");
 										}

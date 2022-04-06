@@ -5,7 +5,7 @@ function Services(props) {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/services")
+		fetch("http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/services")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);

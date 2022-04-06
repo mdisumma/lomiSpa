@@ -18,7 +18,7 @@ function PaymentForm(props) {
 			try {
 				const { id } = paymentMethod;
 				const response = await axios.post(
-					"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/payment",
+					"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/payment",
 					{
 						amount: props.price * 100,
 						id,
@@ -75,7 +75,7 @@ function PaymentForm(props) {
 									body: JSON.stringify(submitbooking),
 								};
 								fetch(
-									"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/booking",
+									"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/booking",
 									post
 								)
 									.then((response) => response.json())

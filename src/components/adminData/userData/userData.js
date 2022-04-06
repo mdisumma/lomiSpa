@@ -7,7 +7,7 @@ function UserData() {
 	const [userPasswordValue, setUserPasswordValue] = useState("");
 
 	useEffect(() => {
-		fetch("http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/users")
+		fetch("http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/users")
 			.then((response) => response.json())
 			.then(setData);
 	}, []);
@@ -57,7 +57,7 @@ function UserData() {
 								body: JSON.stringify(submitUserData),
 							};
 							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user",
+								"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/user",
 								post
 							)
 								.then((response) => response.json())
@@ -89,7 +89,7 @@ function UserData() {
 							};
 							console.log(findUserData);
 							fetch(
-								"http://ec2-3-10-208-236.eu-west-2.compute.amazonaws.com/user",
+								"http://ec2-35-177-191-15.eu-west-2.compute.amazonaws.com/user",
 								{
 									method: "DELETE",
 									headers: { "Content-Type": "application/json" },
